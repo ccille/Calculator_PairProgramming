@@ -23,10 +23,7 @@
             <div>
                 <input type="number" v-model="firstNumber">
                 <select name="operator" id="operator" v-model="operator">
-                    <option value="+">+</option>
-                    <option value="-">-</option>
-                    <option value="*">*</option>
-                    <option value="/">/</option>
+                    <option :value="operator.o" v-for="operator in operatorList">{{ operator.o }}</option>
                 </select>
                 <input type="number" v-model="secondNumber">
                 <button @click="Calculate"> = </button>

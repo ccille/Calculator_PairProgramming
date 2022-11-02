@@ -3,7 +3,8 @@ const App = Vue.createApp({
         return {
             firstNumber: 0,
             secondNumber: 0,
-            operator: ""
+            operator: "",
+            operatorList: [ {o: "+"}, {o: "-"}, {o: "*"}, {o: "/"} ]
         }
     },
     methods:{
