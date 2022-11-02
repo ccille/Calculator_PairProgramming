@@ -20,7 +20,13 @@
 
     <main>
         <div id="app">
-
+            <div>
+                <input type="number" v-model="firstNumber">
+                <span>+</span>
+                <input type="number" v-model="secondNumber">
+                <button @click="Calculate"></button>
+            </div>
+            <h2>{{ Result }}</h2>
         </div>    
     </main>
     
