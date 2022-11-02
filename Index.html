@@ -22,7 +22,12 @@
         <div id="app">
             <div>
                 <input type="number" v-model="firstNumber">
-                <span>+</span>
+                <select name="operator" id="operator" v-model="operator">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
                 <input type="number" v-model="secondNumber">
                 <button @click="Calculate"> = </button>
             </div>

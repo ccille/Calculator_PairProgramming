@@ -3,11 +3,28 @@ const App = Vue.createApp({
         return {
             firstNumber: 0,
             secondNumber: 0,
+            operator: ""
         }
     },
     methods:{
         Result(){
-            return this.firstNumber + this.secondNumber
+            switch (this.operator) {
+                case "+":
+                return this.firstNumber + this.secondNumber
+                
+                case "-":
+                return this.firstNumber - this.secondNumber
+                
+                case "*":
+                return this.firstNumber * this.secondNumber
+
+                case "/":
+                if (this.secondNumber == 0) {
+                    return "Du kan ikke dividere med 0. You suck!"
+                }
+                return this.firstNumber / this.secondNumber
+            }
+            
         }
     }
 });
